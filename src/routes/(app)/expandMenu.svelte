@@ -1,4 +1,4 @@
-<div class="dropdown dropdown-hover dropdown-end">
+<div class="dropdown dropdown-hover dropdown-end main-text text-lg">
     <button tabindex="-1" class="btn btn-square btn-ghost">
         <i class="gg-menu-grid-o text-base-100" />
     </button>
@@ -12,10 +12,16 @@
             <div class="card-body">
               <h2 class="card-title">边缘坐标</h2>
               <p>行走于世界边缘，荒原的拾荒人。</p>
-              <a class='link-primary' href='https://github.com/Edge-coordinates'>github</a>
+              <a class='link link-hover text-blue-600' href='https://github.com/Edge-coordinates'>github</a>
               <div class="card-actions justify-end">
               </div>
             </div>
           </div>
     </div>
 </div>
+
+<style>
+    .main-text {
+        font-family: 'ZCOOL KuaiLe', sans-serif;
+    }
+</style>

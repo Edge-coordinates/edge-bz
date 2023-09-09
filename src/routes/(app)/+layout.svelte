@@ -49,6 +49,9 @@
 </div>
 
 {#if isshow}
+    <div class="themask">
+        <!-- 这里可以添加您的内容 -->
+    </div>
     <FlowerText />
 {/if}
 
@@ -71,5 +74,13 @@
         z-index: 999;
         /* background-color: lightblue;
       padding: 10px; */
+    }
+    .themask {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(221, 221, 221, 0.7);
     }
 </style>

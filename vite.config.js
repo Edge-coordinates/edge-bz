@@ -8,5 +8,7 @@ export default defineConfig({
             '@/': `${path.resolve(__dirname, 'src')}/`,
         },
     },
-    plugins: [sveltekit()],
+    plugins: [
+        sveltekit()
+    ],
 })

@@ -1,7 +1,7 @@
 <script>
-    import * as jq from 'jquery'
+    let jq
     import { onMount } from 'svelte'
-    import Carousel_01 from '@/components/carousel_01.svelte'
+    import Carousel_02 from '../../components/carousel_02.svelte';
     function parallax_height() {
         var scroll_top = jq(this).scrollTop()
         var sample_section_top = jq('.sample-section').offset().top
@@ -11,11 +11,12 @@
         jq('.sample-header').css({ height: header_height - scroll_top })
     }
     onMount(async () => {
+        jq = window.$;
         var header_height = jq(window).height()
         parallax_height()
         jq('.sample-header').css({ height: header_height })
-
-        new Valine({
+        var valine = new Valine();
+        valine.init({
             el: '#vcomments',
             appId: 'bmfiUG79ugFV2EJgR9mPnFIB-gzGzoHsz',
             appKey: '4wn64SFU7lP9BzzhyViOL2Es',
@@ -27,10 +28,12 @@
 
 <div class="sample-header">
     <div class="sample-header-section">
-        <Carousel_01 />
+        <!-- <Carousel_01 /> -->
+        
         <!-- <h1>Scroll down to see the parallax effect</h1>
         <h2>Background landcape scrolls with its own depth</h2> -->
     </div>
+    <Carousel_02 />
     <div style="position: absolute; bottom: 5%; left:50%;">
         <button class="btn btn-lg btn-ghost shadow-sm text-base-100 text-2xl"
             >向下滚动……</button
@@ -45,9 +48,9 @@
 </div>
 
 <style>
-    .webmadewell {
+    /* .webmadewell {
         background-color: white;
-    }
+    } */
     .sample-header {
         position: fixed;
         left: 0;
@@ -78,12 +81,12 @@
         text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
         font-family: 'Montserrat', sans-serif;
     }
-    h1 {
+    /* h1 {
         font-weight: 500;
     }
     h2 {
         font-weight: 400;
-    }
+    } */
     .sample-section-wrap {
         position: relative;
         background-color: white;

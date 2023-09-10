@@ -18,7 +18,7 @@
         </div>
     </div>
     <div class="navbar-center">
-        <ul class="menu menu-vertical sm:menu-horizontal text-base-100">
+        <ul class="menu menu-horizontal text-base-100">
             <li><a class="link link-hover" href="/">首页</a></li>
             <!-- <li><a class="link link-hover" href="/">教师节</a></li> -->
             <li><a class="link link-hover" href="/about">关于</a></li>
@@ -28,23 +28,6 @@
 </div>
 
 <div>
-    <!-- <div
-        class="navbar bg-neutral rounded-lg shadow-lg top-0 left-0 w-full z-50"
-    >
-        <div class="navbar-start">
-            <div class="btn btn-ghost normal-case text-xl text-base-100">
-                边缘の小站
-            </div>
-        </div>
-        <div class="navbar-center">
-            <ul class="menu menu-vertical lg:menu-horizontal text-base-100">
-                <li><a class="link link-hover" href="/">首页</a></li>
-                <li><a class="link link-hover" href="/">教师节</a></li>
-                <li><a class="link link-hover" href="/about">关于</a></li>
-            </ul>
-        </div>
-        <div class="navbar-end"><ExpandMenu /></div>
-    </div> -->
     <slot />
 </div>
 

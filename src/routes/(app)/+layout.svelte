@@ -1,12 +1,22 @@
 <script>
+    import { onMount } from 'svelte';
     import ExpandMenu from './expandMenu.svelte'
-
     import FlowerText from '@/components/flower_text.svelte'
-
+    import { goto } from '$app/navigation';
+    import { showWishing } from '@/store/stores.ts';
     let isshow = 0
-    function handleClick() {
-        isshow = !isshow
+    const unsubscribe = showWishing.subscribe(value => {
+		isshow = value;
+	});
+    async function handleClick() {
+        if(!isshow){
+            await goto('/about')
+        }
+        showWishing.update(n => !n)
     }
+    onMount(() => {
+
+    })
 </script>
 
 <div

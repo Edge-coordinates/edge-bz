@@ -537,10 +537,17 @@
 </div>
 
 <style>
+    .the-flower-text {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 20;
+    }
     .container {
         position: fixed;
-        top: 0;
-        left: 0;
+        top: 10px;
+        left: 10px;
+        z-index: 20;
     }
     #text-input {
         position: fixed;

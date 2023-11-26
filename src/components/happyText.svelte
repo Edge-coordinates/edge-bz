@@ -7,7 +7,7 @@
 </script>
 
 <h1>
-    {#each items as item (item)}
+    {#each items as item (Math.round(Math.random()*10000))}
         <span>{item}</span>
     {/each}
 </h1>
